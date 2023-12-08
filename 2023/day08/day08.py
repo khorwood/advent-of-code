@@ -8,7 +8,6 @@ def part1():
         dict = {}
         for src, left, right in maps:
             dict[src] = (left,right)
-
         print(count_steps(steps, dict, 'AAA'))
 
 def part2():
@@ -19,10 +18,7 @@ def part2():
         dict = {}
         for src, left, right in maps:
             dict[src] = (left,right)
-        i = 0
-        count = 0
         pos = [x for x in dict.keys() if x.endswith('A')]
-        print(pos)
         count = [count_steps(steps, dict, p) for p in pos]
         print(math.lcm(*count))
 
